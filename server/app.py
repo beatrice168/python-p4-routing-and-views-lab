@@ -12,11 +12,10 @@ def greeting():
      return 'hello'
 @app.route('/count/<int:param>')
 def count(param):
-    numbers = '\n'.join(str(num) for num in range(param + 1))
+    numbers = '\n'.join(str(num) for num in range(param)) + '\n'
     return numbers
 @app.route('/math/<int:num1>/<operation>/<int:num2>')
 def math(num1,operation,num2):
-     
      if operation == '+':
         result = 5 + 5
      elif operation == '-':
